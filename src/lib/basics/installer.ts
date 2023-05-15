@@ -6,7 +6,7 @@ import { raiseHTTPErrors } from '@youwol/http-primitives'
 export function contextMenuActions({ node, explorer }) {
     return [
         {
-            name: 'New vs-flow.repl',
+            name: 'New vsf notebook',
             icon: { class: 'fas fa-random' },
             enabled: () => true,
             exe: async () => newVsFlowReplProject(node, explorer),
@@ -19,16 +19,16 @@ async function newVsFlowReplProject(parentNode, explorer) {
     const assetsGtwClient = new AssetsGateway.Client()
     explorer.newAsset({
         parentNode: parentNode,
-        pendingName: 'new vs-flow.repl',
-        type: 'vs-flow.repl',
+        pendingName: 'New vsf notebook',
+        type: 'vsf-notebook',
         response$: assetsGtwClient.assets
             .createAsset$({
                 queryParameters: { folderId: parentNode.id },
                 body: {
-                    kind: 'vs-flow.repl',
-                    name: 'new vs-flow.repl',
-                    description: 'VS-Flow REPL project',
-                    tags: ['vs-flow', 'REPL'],
+                    kind: 'vsf-notebook',
+                    name: 'new vsf notebook',
+                    description: 'VS-Flow Notebook project',
+                    tags: ['vs-flow', 'notebook'],
                 },
             })
             .pipe(
@@ -55,4 +55,4 @@ async function newVsFlowReplProject(parentNode, explorer) {
     })
 }
 
-export const applications: string[] = ['@youwol/vs-flow-repl']
+export const applications: string[] = ['@youwol/vsf-notebook']
