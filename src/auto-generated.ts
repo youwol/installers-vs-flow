@@ -91,7 +91,7 @@ export const setup = {
         assetId:'QHlvdXdvbC9pbnN0YWxsZXJzLXZzLWZsb3c=',
     version:'0.1.0-wip',
     shortDescription:"",
-    developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/installers-vs-flow',
+    developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/installers-vs-flow&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/installers-vs-flow',
     sourceGithub:'https://github.com/youwol/installers-vs-flow',
     userGuide:'https://l.youwol.com/doc/@youwol/installers-vs-flow',
@@ -106,7 +106,7 @@ export const setup = {
     },
 
     installMainModule: ({cdnClient, installParameters}:{
-        cdnClient:{install:(unknown) => Promise<Window>},
+        cdnClient:{install:(unknown) => Promise<WindowOrWorkerGlobalScope>},
         installParameters?
     }) => {
         const parameters = installParameters || {}
@@ -125,7 +125,7 @@ export const setup = {
     },
     installAuxiliaryModule: ({name, cdnClient, installParameters}:{
         name: string,
-        cdnClient:{install:(unknown) => Promise<Window>},
+        cdnClient:{install:(unknown) => Promise<WindowOrWorkerGlobalScope>},
         installParameters?
     }) => {
         const entry = secondaryEntries[name]
