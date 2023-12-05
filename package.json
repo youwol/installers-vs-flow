@@ -1,6 +1,6 @@
 {
     "name": "@youwol/installers-vs-flow",
-    "description": "",
+    "description": "Environment installer for the vs-flow ecosystem.",
     "version": "0.1.0-wip",
     "author": "greinisch@youwol.com",
     "homepage": "https://github.com/youwol/installers-vs-flow#README.md",
