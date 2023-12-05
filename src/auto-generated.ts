@@ -89,8 +89,8 @@ const entries = {
 export const setup = {
     name:'@youwol/installers-vs-flow',
         assetId:'QHlvdXdvbC9pbnN0YWxsZXJzLXZzLWZsb3c=',
-    version:'0.1.0-wip',
-    shortDescription:"",
+    version:'0.1.0',
+    shortDescription:"Environment installer for the vs-flow ecosystem.",
     developerDocumentation:'https://platform.youwol.com/applications/@youwol/cdn-explorer/latest?package=@youwol/installers-vs-flow&tab=doc',
     npmPackage:'https://www.npmjs.com/package/@youwol/installers-vs-flow',
     sourceGithub:'https://github.com/youwol/installers-vs-flow',
@@ -135,7 +135,7 @@ export const setup = {
         const parameters = installParameters || {}
         const scripts = [
             ...(parameters.scripts || []),
-            `@youwol/installers-vs-flow#0.1.0-wip~dist/@youwol/installers-vs-flow/${entry.name}.js`
+            `@youwol/installers-vs-flow#0.1.0~dist/@youwol/installers-vs-flow/${entry.name}.js`
         ]
         const modules = [
             ...(parameters.modules || []),
