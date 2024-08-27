@@ -1,10 +1,10 @@
 
 const runTimeDependencies = {
     "externals": {
-        "@youwol/os-core": "^0.1.6",
         "@youwol/cdn-client": "^1.0.10",
         "@youwol/http-clients": "^2.0.5",
         "@youwol/http-primitives": "^0.1.2",
+        "@youwol/os-core": "^0.1.6",
         "rxjs": "^6.5.5"
     },
     "includedInBundle": {
@@ -12,11 +12,6 @@ const runTimeDependencies = {
     }
 }
 const externals = {
-    "@youwol/os-core": {
-        "commonjs": "@youwol/os-core",
-        "commonjs2": "@youwol/os-core",
-        "root": "@youwol/os-core_APIv01"
-    },
     "@youwol/cdn-client": {
         "commonjs": "@youwol/cdn-client",
         "commonjs2": "@youwol/cdn-client",
@@ -31,6 +26,11 @@ const externals = {
         "commonjs": "@youwol/http-primitives",
         "commonjs2": "@youwol/http-primitives",
         "root": "@youwol/http-primitives_APIv01"
+    },
+    "@youwol/os-core": {
+        "commonjs": "@youwol/os-core",
+        "commonjs2": "@youwol/os-core",
+        "root": "@youwol/os-core_APIv01"
     },
     "rxjs": {
         "commonjs": "rxjs",
@@ -47,10 +47,6 @@ const externals = {
     }
 }
 const exportedSymbols = {
-    "@youwol/os-core": {
-        "apiKey": "01",
-        "exportedSymbol": "@youwol/os-core"
-    },
     "@youwol/cdn-client": {
         "apiKey": "1",
         "exportedSymbol": "@youwol/cdn-client"
@@ -62,6 +58,10 @@ const exportedSymbols = {
     "@youwol/http-primitives": {
         "apiKey": "01",
         "exportedSymbol": "@youwol/http-primitives"
+    },
+    "@youwol/os-core": {
+        "apiKey": "01",
+        "exportedSymbol": "@youwol/os-core"
     },
     "rxjs": {
         "apiKey": "6",
